@@ -10,8 +10,6 @@ public class BufferedBinaryFileReader implements Readable {
 
     @Override
     public void read(String filename) throws IOException {
-        // TODO : implement this method
-
         try (BufferedInputStream bufferedInputStream = new BufferedInputStream(new FileInputStream(filename))) {
             int nbrOfCharRead = bufferedInputStream.read();
         }
