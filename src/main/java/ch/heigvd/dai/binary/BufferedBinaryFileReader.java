@@ -11,6 +11,9 @@ public class BufferedBinaryFileReader implements Readable {
     @Override
     public void read(String filename) throws IOException {
         // TODO : implement this method
-        throw new UnsupportedOperationException("Not implemented yet");
+
+        try (BufferedInputStream bufferedInputStream = new BufferedInputStream(new FileInputStream(filename))) {
+            int nbrOfCharRead = bufferedInputStream.read();
+        }
     }
 }

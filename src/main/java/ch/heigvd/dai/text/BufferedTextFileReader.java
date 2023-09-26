@@ -10,6 +10,9 @@ public class BufferedTextFileReader implements Readable {
     @Override
     public void read(String filename) throws IOException {
         // TODO : implement this method
-        throw new UnsupportedOperationException("Not implemented yet");
+
+        try(BufferedReader bufferedReader = new BufferedReader(new FileReader(filename))) {
+            int nbrOfCharRead = bufferedReader.read();
+        }
     }
 }
